@@ -16,13 +16,15 @@ and open the template in the editor.
         <link rel="stylesheet" href="Scripts/css/leaflet.css" />
 	<link rel="stylesheet" href="Scripts/css/main.css">
         <link rel="stylesheet" href="Scripts/css/bootstrap.min.css">
+        <link rel="stylesheet" href="Scripts/css/bootstrapValidator.css">
         <script src="Scripts/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
     </head>
     <body>
        
         <!-- Navigation & Logo-->
-        <div class="mainmenu-wrapper">
-	        <div class="container">
+        <div id="navegacion" class="mainmenu-wrapper">
+      <div class="container">
 	        	<div class="menuextras">
 					<div class="extras">
 						<ul>
@@ -78,53 +80,51 @@ and open the template in the editor.
 					</ul>
 				</nav>
 			</div>
-		</div>
+
+        </div>
      
 	<!-- Registrar -->
         <h2>Registrar Empresa</h2>
-        <form role="form">
+        <form role="form"  id = "form-empresa">
             <br>
                         
             <div class="form-group">
               <label>Nombre de Empresa</label>
-              <input class="form-control" id="exampleInputEmail1" placeholder="Empresa">
+              <input class="form-control" id="txtnombre" name="txtnombre" placeholder="Empresa">
             </div>
             <div class="form-group">
               <label>RUC</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="RUC">
+              <input  class="form-control" id="txtruc" name ="txtruc" placeholder="RUC">
             </div>
             <div class="form-group">
               <label>Nombre de Contacto</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="Contacto">
+              <input  class="form-control" id="txtcontacto" name ="txtcontacto" placeholder="Contacto">
             </div>
             <div class="form-group">
               <label>Dirección</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="Direccion">
+              <input  class="form-control" id="txtdirecc" name ="txtdirecc"  placeholder="Direccion">
             </div>
             <div class="form-group">
               <label>Distrito</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="Celular">
+              <input  class="form-control" id="txtdistri" name="txtdistri" placeholder="Celular">
             </div>
             <div class="form-group">
               <label>Teléfono</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="Distrito">
+              <input  class="form-control" id="txttelef" name="txttelef" placeholder="Distrito">
             </div>
+      
             <div class="form-group">
-              <label>Celular</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="Celular">
-            </div>
-                       <div class="form-group">
               <label>Correo</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="Correo">
+              <input  class="form-control" id="txtcorreo" name="txtcorreo" placeholder="Correo">
             </div>
-                        <div class="form-group">
+             <div class="form-group">
               <label>Rubro</label>
-              <input  class="form-control" id="exampleInputPassword1" placeholder="Rubro">
+              <input  class="form-control" id="txtrubo"  name="txtrubo" placeholder="Rubro">
             </div>
             
             <br>
             
-            <button type="button" class="btn btn-primary">Registrar</button>
+            <button id ="btnRegistar" type="submit" class="btn btn-primary">Registrar</button>
             <button type="button" class="btn btn-danger">Cancelar</button>  
             
         </form>
@@ -132,27 +132,27 @@ and open the template in the editor.
 
 
         <!-- Footer -->
-        <div class="footer">
-            <div class="container">
-                    <div class="row">
-                            <div class="col-md-12">
-                                    <div class="footer-copyright">&copy; 2014 Bolsa de Trabajo. All rights reserved.</div>
-                            </div>
-                    </div>
-                </div>
+        <div id="footer" class="footer">
+          
         </div>
         <!-- End Footer -->
 
         <!-- Javascripts -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
         <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="Scripts/js/jquery-1.9.1.min.js"></script>
         <script src="Scripts/js/bootstrap.min.js"></script>
         <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
         <script src="Scripts/js/jquery.fitvids.js"></script>
         <script src="Scripts/js/jquery.sequence-min.js"></script>
         <script src="Scripts/js/jquery.bxslider.js"></script>
-        <script src="Scripts/js/main-menu.js"></script>
+        <script src="Scripts/js/config.js"></script>
+        <!--script src="Scripts/js/main-menu.js"></script-->
         <script src="Scripts/js/template.js"></script>
+        <script src="Scripts/js/funciones.js"></script>
+        <script src="Scripts/js/registrarEmpresa.js"></script>
+        <script src="Scripts/js/bootstrapValidator.js"></script>
+    
       
     </body>
 </html>
