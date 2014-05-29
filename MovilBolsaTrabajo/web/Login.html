@@ -60,7 +60,7 @@ and open the template in the editor.
 										<h4>Postulantes</h4>
 										<ul>
 											<li><a href="RegistrarPostulante.html">Registrase</a></li>
-                                                                                        <li><a href="login.html">Ingresar</a></li>
+                                                                                        <li><a href="Login.html">Ingresar</a></li>
 										</ul>
 									</div>
 									<div>
@@ -88,15 +88,15 @@ and open the template in the editor.
 
       <form class="form-signin">
         <div class="form-group">
-            <input type="text" class="input-block-level" placeholder="Correo">
+            <input type="text" class="input-block-level" placeholder="Correo" id="txtusuario">
         </div>
         <div class="form-group">
-            <input type="password" class="input-block-level" placeholder="Contraseña">
+            <input type="password" class="input-block-level" placeholder="Contraseña" id="txtclave">
         </div>
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Recordar Contraseña
         </label>
-        <button class="btn btn-large btn-primary" type="submit">Ingresar</button>
+          <button class="btn btn-large btn-primary" type="button" id="btningresar">Ingresar</button>
       </form>
 
     </div> <!-- /container -->
@@ -125,7 +125,11 @@ and open the template in the editor.
         <script src="Scripts/js/jquery.sequence-min.js"></script>
         <script src="Scripts/js/jquery.bxslider.js"></script>
         <script src="Scripts/js/main-menu.js"></script>
-        <script src="Scripts/js/template.js"></script>
+        <!--<script src="Scripts/js/template.js"></script>-->
+        <script src="Scripts/js/funciones.js"></script>
+        <script src="Scripts/js/Login.js"></script>
+        
+        
       
     </body>
 </html>
