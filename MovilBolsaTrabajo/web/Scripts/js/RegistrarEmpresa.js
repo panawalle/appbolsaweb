@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 
+
 var varUrl = "http://localhost:8080/BolsaTrabajoWS/rest/bolsatrabajo/registrarempresa";
+
 $(document).ready(function() {
 
     $("#form-empresa").bootstrapValidator({
