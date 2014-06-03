@@ -4,16 +4,15 @@
  * and open the template in the editor.
  */
 
-$(document).ready(function(){
-    //alert(" hola mundo");
-    $("#btningresar").click(function(){
-        //alert(" hola gaby");
+//$(document).ready(function(){
+
+    $("#btningresar").bind("click",function(){
         datos={
             usuario: $("#txtusuario").val(),
             clave: $("#txtclave").val(),
             idpostulante: "0"
         };
-        alert(JSON.stringify(datos));
+        //alert(JSON.stringify(datos));
         $.ajax({
             url: "http://localhost:8080/BolsaTrabajoWS/rest/bolsatrabajo/loginpostulante",
             type: "POST",
@@ -21,10 +20,17 @@ $(document).ready(function(){
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(datos),
             success: function(data) {
-                 alert(data.usuario); 
+                if(data ==null){
+                    //alert(" Clave y/o Password incorrectos");
+                    $("#lblmensaje").html("Clave y/o Password incorrectos");
+                }else{
+                    //alert(data.usuario); 
+                    $("#formlogin").attr("action","index.jsp");
+                    $("#formlogin").submit();
+                }
             }
         });
     });
-});
+//});
 
 
