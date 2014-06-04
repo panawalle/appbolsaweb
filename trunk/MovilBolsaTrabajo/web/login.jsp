@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 02/06/2014, 09:42:47 PM
-    Author     : ROGER
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,9 +13,9 @@
         
     </head>
     <body>
-        
+  
          <%@include file="pages/general/navegacion.jsp" %>
-        <h2>Iniciar Session</h2>
+        <h2>Iniciar Session </h2>
         <br>
         <div class="container">
 
