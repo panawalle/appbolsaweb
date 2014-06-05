@@ -11,14 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Bolsa de Trabajo</title>
         <%@include file="pages/general/head.html" %>
-         <%
-             
-           String userlogin = request.getParameter("txtusuario");
-           System.out.println( " userlogin : "+userlogin);
-           if(userlogin!=null){
-               session.setAttribute("userlogin", userlogin);
-           }
-        %>
+
 
     </head>
     <body>

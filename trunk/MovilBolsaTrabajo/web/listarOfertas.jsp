@@ -7,17 +7,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Bolsa de Trabajo</title>       
         <%@include file="pages/general/head.html" %>
-        <%            
-            String idoferta = request.getParameter("idoferta");
-            if(idoferta!=null ){
-                if( session.getAttribute("userlogin")==null){
-                    response.sendRedirect("login.jsp");
-                }
-            }
+        <%  
+        
+             
+           //iniciando session  
+           String userlogin = request.getParameter("txtusuario");
+           System.out.println( " userlogin : "+userlogin);
+           if(userlogin!=null){
+               session.setAttribute("idpostulante", request.getParameter("hdnidpostulante"));
+               session.setAttribute("userlogin", userlogin);
+           }
+        
+         
 
         %>
 
@@ -45,9 +49,15 @@
 
                 </tbody>
             </table>
+            
+            <form id="formlistarofertas" method="POST"  >                 
+                <input type="hidden" id="idoferta" name="idoferta" >
+                <input type="hidden" id="descripcion" name="descripcion" >    
+                <input type="hidden" id="sueldo" name="sueldo" > 
+                <input type="hidden" id="fechalimite" name="fechalimite" >        
+            </form>
+            
         </div>
-
-
 
         <%@include file="pages/general/footer.html" %>
         <script src="Scripts/js/listarOfertas.js"></script>

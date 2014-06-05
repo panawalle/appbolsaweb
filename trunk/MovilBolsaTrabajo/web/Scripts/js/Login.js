@@ -25,7 +25,8 @@
                     $("#lblmensaje").html("Clave y/o Password incorrectos");
                 }else{
                     //alert(data.usuario); 
-                    $("#formlogin").attr("action","index.jsp");
+                    $("#hdnidpostulante").val(data.idpostulante);
+                    $("#formlogin").attr("action","listarOfertas.jsp");
                     $("#formlogin").submit();
                 }
             }
