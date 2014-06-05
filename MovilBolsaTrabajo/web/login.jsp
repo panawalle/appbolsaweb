@@ -20,6 +20,8 @@
         <div class="container">
 
             <form class="form-signin"  method="POST" id="formlogin">
+                
+                <input type="hidden" id="hdnidpostulante" name="hdnidpostulante"  >
                 <div class="form-group">
                     <input type="text" class="input-block-level" placeholder="Correo" name="txtusuario" id="txtusuario">
                 </div>

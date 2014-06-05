@@ -48,7 +48,7 @@
 									<div>
 										<h4>Postulantes</h4>
 										<ul>
-											<li><a href="#">Registrase</a></li>
+											<li><a href="RegistrarPostulante.jsp">Registrase</a></li>
                                                                                         <li><a href="login.jsp">Ingresar</a></li>
 										</ul>
 									</div>
