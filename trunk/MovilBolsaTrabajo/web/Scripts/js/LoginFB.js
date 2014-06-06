@@ -10,9 +10,39 @@
 
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      testAPI();
-      $("#cuenta").hide();
-      $("#titu").text("Modifica tus datos de Facebook");
+
+      FB.api('/me', function(response) {
+          
+      // YA SE REGISTRO ANTES ????    
+      $("#txtusuario").val(response.email),
+      $("#txtclave").val("123456"),  
+      
+      datos={
+            usuario: $("#txtusuario").val(),
+            clave: $("#txtclave").val(),
+            idpostulante: "0"
+      };
+      $.ajax({
+            url: "http://localhost:8080/BolsaTrabajoWS/rest/bolsatrabajo/loginpostulante",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(datos),
+            success: function(data) {
+                if(data ==null){
+                    // NO SE REGISTRO 
+                     testAPI();
+                     testAPI2();
+                }else{
+                    // YA SE REGISTRO 
+                    $("#formlogin").attr("action","index.jsp");
+                    $("#formlogin").submit();
+                }
+            }
+        });
+      }); 
+          
+     
       
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
@@ -59,21 +89,40 @@
   }(document, 'script', 'facebook-jssdk'));
 
 
-  function testAPI() {
+function testAPI() {
     console.log('Bienvenido Web Bolsa de Trabajo!  Fetching your information.... ');
+    $("#cuenta").hide();
+    $("#titu").text("Modifica tus datos de Facebook");
     FB.api('/me', function(response) {
       console.log('Successful login for: '); 
+      
       $("#registrar" ).show();
+      
       console.log('Nombre    : ' + response.name);
-      console.log('Cumpleano : ' + response.birthday);
       console.log('Email     : ' + response.email);
       console.log('Genero    : ' + response.gender);
-      console.log('Direccion : ' + response.hometown.name);
       
       $("#nombres").val(response.name);
-      $("#fechaNacimiento").val(response.birthday);
       $("#correo").val(response.email); 
       $("#sexo").val(response.gender); 
+      $("#clave").val("123456");
+      $("#usuario").val(response.email);
+
+      document.getElementById('status').innerHTML =
+        'Gracias por registrarte, ' + response.name + '!';
+
+    });
+
+}
+
+function testAPI2() {
+    FB.api('/me', function(response) {
+        
+      console.log('Successful login for: '); 
+      console.log('Cumpleano : ' + response.birthday);
+      console.log('Direccion : ' + response.hometown.name);
+      
+      $("#fechaNacimiento").val(response.birthday);
       $("#lugarNacimiento").val(response.hometown.name);
               
       var educationName = "";
@@ -92,27 +141,21 @@
       var workName = "";
       var workType = "";
       for(ed in response.work) {
-            var employerName = response.work[ed].employer.name;
-            var positionName = response.work[ed].position.name;
-            console.log('Trabajos : ' + employerName);
-            console.log('Puesto : ' + positionName);
             workName = response.work[ed].employer.name + ' ; '+ workName;
             workType = response.work[ed].position.name + ' ; '+ workType;
       }
       $("#experienciaLaboral").val(workName+ '('+ workType + ')');
       
       $("#edad").val((2014 - parseInt(response.birthday.substring(6, 10))));
-      
-      
-      document.getElementById('status').innerHTML =
-        'Gracias por registrarte, ' + response.name + '!';
-            
+     
     });
-
 }
 
+
+
 ////   BTNREGISTRAR
-$("#btnregistrar").bind("click",function(){
+
+    $("#btnregistrar").bind("click",function(){
         
     alert("mostrar");
     datos={
@@ -141,7 +184,7 @@ $("#btnregistrar").bind("click",function(){
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(datos),
-            success: function(data) {
+            success: function(data){
                 if(data ==null){
                     alert("Error al momento de registrarse");
                 }else{
@@ -152,6 +195,8 @@ $("#btnregistrar").bind("click",function(){
             }
         });
     });
+
+
 
 
 ////////  btningresar

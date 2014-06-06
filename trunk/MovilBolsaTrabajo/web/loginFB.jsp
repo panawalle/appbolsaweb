@@ -57,7 +57,7 @@
             </div>
             <div class="form-group">
                 <label>Edad:</label>
-                <input  class="form-control" id="edad" placeholder="Edad">
+                <input class="form-control" id="edad" placeholder="Edad">
             </div>
             <div class="form-group">
                 <label>Sexo:</label>
@@ -77,7 +77,7 @@
             </div>
             <div class="form-group">
                 <label>Correo:</label>
-                <input  class="form-control" id="correo" placeholder="Correo">
+                <input  class="form-control" id="correo" placeholder="Correo" disabled>
             </div>
             <div class="form-group">
                 <label>Documento de Identidad:</label>
@@ -101,11 +101,11 @@
             </div>
             <div class="form-group">
                 <label>Usuario:</label>
-                <input  class="form-control" id="usuario" placeholder="Usuario">
+                <input  class="form-control" id="usuario" placeholder="Usuario" disabled>
             </div>
             <div class="form-group">
                 <label>Clave:</label>
-                <input  class="form-control" type="password" id="clave" placeholder="Clave">
+                <input  class="form-control" type="password" id="clave" placeholder="Clave" disabled>
             </div>
             <br>
             
