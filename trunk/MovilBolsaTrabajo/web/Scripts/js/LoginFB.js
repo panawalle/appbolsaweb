@@ -15,7 +15,7 @@
           
       // YA SE REGISTRO ANTES ????    
       $("#txtusuario").val(response.email),
-      $("#txtclave").val("123456"),  
+      $("#txtclave").val("123456"),
       
       datos={
             usuario: $("#txtusuario").val(),
@@ -156,14 +156,20 @@ function testAPI2() {
 ////   BTNREGISTRAR
 
     $("#btnregistrar").bind("click",function(){
-        
-    alert("mostrar");
+        var sex = "";
+        var sexo = $("#sexo").val();
+        if (sexo === "male"){
+            sex = "1";
+        } else{
+            sex = "2";
+        }
+    
     datos={
             idpostulante :"0",
             nombres:$("#nombres").val(),
             fechaNacimiento :$("#fechaNacimiento").val(),
             edad : $("#edad").val(),
-            sexo : $("#sexo").val(),
+            sexo : sex,
             lugarNacimiento: $("#lugarNacimiento").val(),
             descripcionPersonal : $("#descripcionPersonal").val(),
             telefono : $("#telefono").val(),
@@ -176,9 +182,9 @@ function testAPI2() {
             usuario :$("#usuario").val(),
             clave :$("#clave").val()
         };
+        
        // alert(JSON.stringify(datos));
-   
-        $.ajax({
+       $.ajax({
             url: "http://localhost:8080/BolsaTrabajoWS/rest/bolsatrabajo/registrarpostulante",
             type: "POST",
             dataType: "json",
