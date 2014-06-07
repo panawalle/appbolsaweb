@@ -26,6 +26,7 @@
         <div id="status"></div>
         
         <div id="cuenta">
+            
             <h2>Iniciar Sesion con una Cuenta</h2> 
             <form class="form-signin"  method="POST" id="formlogin">
                 <div class="form-group">
@@ -34,11 +35,6 @@
                 <div class="form-group">
                     <input type="password" class="input-block-level" placeholder="Contraseña" name="txtclave" id="txtclave">
                 </div>
-
-                <label class="checkbox">
-                    <input type="checkbox" value="remember-me"> Recordar Contraseña
-                </label>
-
                 <div Id="lblmensaje" style="color:red" ></div>
                 <button class="btn btn-large btn-primary" type="button" id="btningresar">Ingresar</button>
             </form>
@@ -101,7 +97,7 @@
             </div>
             <div class="form-group">
                 <label>Usuario:</label>
-                <input  class="form-control" id="usuario" placeholder="Usuario" disabled>
+                <input  class="form-control" id="usuario" name="usuario" placeholder="Usuario" disabled>
             </div>
             <div class="form-group">
                 <label>Clave:</label>
