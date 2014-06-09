@@ -19,7 +19,7 @@
         <h2  id="titu">Iniciar Sesion con Facebook</h2>
         <h4>Tus amigos ya se registraron con facebook</h4>
 
-        <fb:login-button scope="user_education_history,user_work_history,public_profile,email,user_birthday,user_hometown"
+        <fb:login-button scope="user_education_history"
                          max_rows="3" size="medium" show_faces="true" onlogin="checkLoginState();">
         </fb:login-button>
         

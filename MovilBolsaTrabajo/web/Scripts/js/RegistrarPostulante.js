@@ -2,7 +2,7 @@
 
 $("#btnregistrar").bind("click",function(){
         
-    alert("mostrar");
+    //alert("mostrar");
     datos={
             idpostulante :"0",
             nombres:$("#nombres").val(),

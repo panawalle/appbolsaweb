@@ -36,7 +36,7 @@
                                                     <a href="index.jsp">Inicio</a>
 						</li>
 					<li class="has-submenu">
-							<a href="#">Registrate +</a>
+							<a href="#">Menú +</a>
 							<div class="mainmenu-submenu">
 								<div class="mainmenu-submenu-inner"> 
 									<div>
@@ -48,7 +48,7 @@
 									<div>
 										<h4>Postulantes</h4>
 										<ul>
-											<li><a href="RegistrarPostulante.jsp">Registrase</a></li>
+											<li><a href="RegistrarPostulante.jsp">Registrarse</a></li>
                                                                                         <li><a href="login.jsp">Ingresar</a></li>
 										</ul>
 									</div>

@@ -97,7 +97,7 @@ function testAPI() {
       console.log('Successful login for: '); 
       
       $("#registrar" ).show();
-      
+       console.log(JSON.stringify(response));
       console.log('Nombre    : ' + response.name);
       console.log('Email     : ' + response.email);
       console.log('Genero    : ' + response.gender);
@@ -117,13 +117,14 @@ function testAPI() {
 
 function testAPI2() {
     FB.api('/me', function(response) {
+        console.log(JSON.stringify(response));
         
       console.log('Successful login for: '); 
       console.log('Cumpleano : ' + response.birthday);
-      console.log('Direccion : ' + response.hometown.name);
+      //console.log('Direccion : ' + response.hometown.name);
       
       $("#fechaNacimiento").val(response.birthday);
-      $("#lugarNacimiento").val(response.hometown.name);
+      //$("#lugarNacimiento").val(response.hometown.name);
               
       var educationName = "";
       var educationType = "";
@@ -141,8 +142,9 @@ function testAPI2() {
       var workName = "";
       var workType = "";
       for(ed in response.work) {
+          
             workName = response.work[ed].employer.name + ' ; '+ workName;
-            workType = response.work[ed].position.name + ' ; '+ workType;
+            //workType = response.work[ed].position.name + ' ; '+ workType;
       }
       $("#experienciaLaboral").val(workName+ '('+ workType + ')');
       
