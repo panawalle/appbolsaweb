@@ -23,18 +23,17 @@
                 
                 <input type="hidden" id="hdnidpostulante" name="hdnidpostulante"  >
                 <div class="form-group">
-                    <input type="text" class="input-block-level" placeholder="Correo" name="txtusuario" id="txtusuario">
+                    <input type="text" class="form-control"  placeholder="Correo" name="txtusuario" id="txtusuario">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="input-block-level" placeholder="Contraseña" name="txtclave" id="txtclave">
+                    <input type="password" class="form-control"  placeholder="Contraseña" name="txtclave" id="txtclave">
                 </div>
 
-                <label class="checkbox">
-                    <input type="checkbox" value="remember-me"> Recordar Contraseña
-                </label>
-
                 <div Id="lblmensaje" style="color:red" ></div>
+                <br></br>
                 <button class="btn btn-large btn-primary" type="button" id="btningresar">Ingresar</button>
+                <br></br>
+                <div>  <label> </label><a href="RegistrarPostulante.jsp" > Registrarse </a></div> 
             </form>
 
         </div>

@@ -92,6 +92,9 @@
                 </div>
             </div>
         </div>
+        <form action="listarOfertas.jsp" method="POST">
+         <button class="btn btn-large btn-primary" type="submit" id="btningresar"> Buscar Ofertas</button>
+         </form>
         <!-- End Homepage Slider -->
 
         <!-- Press Coverage -->
